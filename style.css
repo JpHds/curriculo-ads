@@ -18,6 +18,19 @@ p {
     color: white;
 }
 
+body {
+    display: flex;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari e Chrome */
+    -ms-user-select: none; /* Internet Explorer / Edge */
+}
+
 .font-droid {
     font-family: 'DroidSans', sans-serif;
     font-size: 1.5em;
@@ -39,11 +52,13 @@ p {
     background-image: url(img/bg-img.avif);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #000;
 }
 
 .button {
-    /* text-align: left; */
+    background-color: #ffffff00;
     border: solid rgba(255, 255, 255, 0.774);
     border-radius: 5px;
     color: white;
@@ -56,6 +71,112 @@ p {
 .button:hover {
     background-color: rgb(255, 255, 255);
     color: #8F00FF;
+    transition: 1s;
+}
+
+figure img {
+    display: flex;
+    width: 5vw; 
     transition: 1s;
 }
 
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+}
+
+.custom-dropdown .dropdown-toggle {
+    border: solid rgba(255, 255, 255, 0.774);
+    border-radius: 5px;
+    color: white;
+    font-family: 'DroidSans', sans-serif;
+    padding: 0.1em 0.8em;
+    margin: 1em;
+    background-color: #ffffff00;
+    font-size: clamp(0.5em,2.5vw,1.5em);
+  }
+
+  .custom-dropdown .dropdown-toggle:hover {
+    background-color: rgb(255, 255, 255);
+    color: #8F00FF;
+    transition: 0.3s;
+  }
+
+  .custom-dropdown .dropdown-item {
+    color: #333;
+  }
+
+  .custom-dropdown .dropdown-item:hover {
+    background-color: #ffffff;
+    color: #8F00FF;
+  }
+
+  .column-list {
+    column-count: 3;
+    column-gap: 5px;
+    padding-left: 3vw;
+    padding: 0;
+  }
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.column-list li img:hover {
+    transition: 0.6s;
+    transform: scale(1.2);
+}
+
+.column-list li img {
+    padding-left: 0.4vw;
+}
+
+.column-list li {
+  font-family: 'DroidSans', sans-serif;
+  font-size: small;
+}
+
+.custom-dropup .dropdown-toggle {
+    border: solid rgba(255, 255, 255, 0.774);
+    border-radius: 5px;
+    color: white;
+    font-family: 'DroidSans', sans-serif;
+    padding: 0.1em 0.8em;
+    margin: 1em;
+    background-color: #ffffff00;
+    font-size: clamp(0.5em,2.5vw,1.5em);
+    margin: 0;
+  }
+
+  .custom-dropup .dropdown-toggle:hover {
+    background-color: rgb(255, 255, 255);
+    color: #8F00FF;
+    transition: 0.3s;
+  }
+
+  .custom-dropup .dropdown-item {
+    color: #333;
+  }
+
+  .custom-dropup .dropdown-item:hover {
+    background-color: #ffffff;
+    color: #8F00FF;
+  }
+
+  .cont {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3em;
+  }
+
+  .column-up li {
+    column-count: 1;
+    padding: 0;
+  }
